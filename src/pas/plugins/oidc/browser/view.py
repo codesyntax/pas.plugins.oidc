@@ -24,7 +24,7 @@ class Session(object):
         self.use_session_data_manager = use_session_data_manager
         if self.use_session_data_manager:
             sdm = api.portal.get_tool('session_data_manager')
-            self._session = sdm.getSessionData(create=True)            
+            self._session = sdm.getSessionData(create=True)
         else:
             data = self.request.cookies.get(self.session_cookie_name) or {}
             if data:
@@ -38,7 +38,7 @@ class Session(object):
             if self.get(name) != value:
                 self._session[name] = value
                 self.request.response.setCookie(
-                    self.session_cookie_name, 
+                    self.session_cookie_name,
                     base64.b64encode(json.dumps(self._session).encode('utf-8'))
                 )
 
@@ -63,9 +63,9 @@ class LoginView(BrowserView):
 
         # https://pyoidc.readthedocs.io/en/latest/examples/rp.html#authorization-code-flow
         args = {
-            'client_id': self.context.client_id, 
-            'response_type': 'code', 
-            'scope': ['profile', 'email', 'phone'],
+            'client_id': self.context.client_id,
+            'response_type': 'code',
+            'scope': self.context.scope,
             'state': session.get('state'),
             'nonce': session.get('nonce'),
             "redirect_uri": self.context.get_redirect_uris(),
@@ -117,8 +117,8 @@ class CallbackView(BrowserView):
             "redirect_uri": self.context.get_redirect_uris(),
         }
         resp = client.do_access_token_request(
-            state=aresp["state"], 
-            request_args=args, 
+            state=aresp["state"],
+            request_args=args,
             authn_method="client_secret_basic"
         )
         userinfo = client.do_user_info_request(state=aresp["state"])

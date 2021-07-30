@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0b1+cs.3 (unreleased)
+1.0b1+cs.3 (2021-07-30)
 -----------------------
 
 - Update changelog [Mikel Larreategi <mlarreategi@codesyntax.com>]

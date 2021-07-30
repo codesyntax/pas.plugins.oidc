@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0b1+cs.4 (unreleased)
+1.0b1+cs.4 (2021-07-30)
 -----------------------
 
 - send code_challenge [Mikel Larreategi <mlarreategi@codesyntax.com>]

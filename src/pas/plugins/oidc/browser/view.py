@@ -8,6 +8,8 @@ from oic.oic.message import AuthorizationResponse
 from oic.oic.message import EndSessionRequest
 from oic import rndstr
 from plone import api
+from hashlib import sha256
+import base64
 
 logger = logging.getLogger(__name__)
 
@@ -69,12 +71,18 @@ class LoginView(BrowserView):
             'state': session.get('state'),
             'nonce': session.get('nonce'),
             "redirect_uri": self.context.get_redirect_uris(),
+            "code_challenge": self.get_code_challenge(session.get('nonce')),
+            "code_challenge_method": "S256"
         }
         auth_req = client.construct_AuthorizationRequest(request_args=args)
         login_url = auth_req.request(client.authorization_endpoint)
         self.request.response.setHeader("Cache-Control", "no-cache, must-revalidate")
         self.request.response.redirect(login_url)
         return
+
+    def get_code_challenge(self, value):
+        """ build a sha256 hash of the base64 encoded value of value """
+        return sha256(base64.b64encode(value.encode('utf-8'))).hexdigest()
 
 
 class LogoutView(BrowserView):

@@ -211,6 +211,12 @@ class OIDCPlugin(BasePlugin):
                 '{}/callback'.format(self.absolute_url()),
             ]
 
+    def get_scopes(self):
+        if self.scope:
+            return [u.decode('utf-8') for u in self.scope]
+        else:
+            return []
+
 
 InitializeClass(OIDCPlugin)
 

@@ -5,7 +5,12 @@ Changelog
 1.0b1+cs.4 (unreleased)
 -----------------------
 
-- Nothing changed yet.
+- send code_challenge [Mikel Larreategi <mlarreategi@codesyntax.com>]
+
+-  [Mikel Larreategi <mlarreategi@codesyntax.com>]
+
+- [ci skip] [Mikel Larreategi <mlarreategi@codesyntax.com>]
+
 
 
 1.0b1+cs.3 (2021-07-30)

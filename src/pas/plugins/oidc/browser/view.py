@@ -65,7 +65,7 @@ class LoginView(BrowserView):
         args = {
             'client_id': self.context.client_id,
             'response_type': 'code',
-            'scope': self.context.scope,
+            'scope': self.context.get_scopes(),
             'state': session.get('state'),
             'nonce': session.get('nonce'),
             "redirect_uri": self.context.get_redirect_uris(),

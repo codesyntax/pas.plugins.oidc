@@ -153,7 +153,7 @@ class CallbackView(BrowserView):
         if resp.status_code == 200:
             userinfo = self.jwt_payload_decode(resp.json().get("id_token"))
         else:
-            pass
+            raise Exception("Bad authentication request")
         # session.set('id_token', )
         self.context.rememberIdentity(userinfo)
         # TODO: manage next_url/came_from

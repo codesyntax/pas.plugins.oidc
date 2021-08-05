@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0b1+cs.5 (unreleased)
+1.0b1+cs.5 (2021-08-05)
 -----------------------
 
 - Merge branch 'main' into configurable-scopes [Mikel Larreategi <mlarreategi@codesyntax.com>]

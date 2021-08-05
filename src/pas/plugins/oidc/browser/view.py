@@ -78,11 +78,6 @@ class LoginView(BrowserView):
         login_url = auth_req.request(client.authorization_endpoint)
         self.request.response.setHeader("Cache-Control", "no-cache, must-revalidate")
         self.request.response.redirect(login_url)
-        print("HAU DA LOGIN URL-a")
-        print(login_url)
-        print(
-            "-------------------------------------------------------------------------------------"
-        )
         return
 
     def get_code_challenge(self, value):

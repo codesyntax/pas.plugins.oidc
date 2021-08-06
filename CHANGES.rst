@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-1.0a1 (unreleased)
-------------------
+1.0b2+cs.1 (2021-08-06)
+-----------------------
 
 - userinfo endpoint changes [Mikel Larreategi <mlarreategi@codesyntax.com>]
 

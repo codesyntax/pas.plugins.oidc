@@ -5,7 +5,8 @@ Changelog
 1.0a3 (unreleased)
 ------------------
 
-- manage came_from
+- check if url is in portal before redirect [Mikel Larreategi <mlarreategi@codesyntax.com>]
+
   [mamico]
 
 1.0a2 (unreleased)

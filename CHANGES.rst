@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-1.0a3 (unreleased)
-------------------
+1.0b3+cs.1 (2022-01-03)
+-----------------------
 
 - check if url is in portal before redirect [Mikel Larreategi <mlarreategi@codesyntax.com>]
 

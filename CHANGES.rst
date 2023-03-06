@@ -5,7 +5,12 @@ Changelog
 1.0b3+cs.2 (unreleased)
 -----------------------
 
-- Nothing changed yet.
+- remove python_requires [Mikel Larreategi <mlarreategi@codesyntax.com>]
+
+-  [Mikel Larreategi <mlarreategi@codesyntax.com>]
+
+- [ci skip] [Mikel Larreategi <mlarreategi@codesyntax.com>]
+
 
 
 1.0b3+cs.1 (2022-01-03)

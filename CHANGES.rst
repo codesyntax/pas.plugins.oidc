@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0b3+cs.2 (unreleased)
+1.0b3+cs.2 (2023-03-06)
 -----------------------
 
 - remove python_requires [Mikel Larreategi <mlarreategi@codesyntax.com>]
